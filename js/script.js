@@ -20,10 +20,14 @@ function searchCountries() {
 
 
 function showCountriesList(resp) {
+	console.log(resp);
   	countriesList.empty();
 	resp.forEach(function(item){
-	//Here is the code that will execute on each successive item in the collection. A single item is hidden under an item variable.
-	   	$('<li>').text(item.name).appendTo(countriesList);
+		//Here is the code that will execute on each successive item in the collection. A single item is hidden under an item variable.
+	   	var img = $('<img>').attr('src', item.flag);
+	   	$('<li>').text(item.name)
+	   			.appendTo(countriesList)
+	   			.append(img);
 	});
 }
 
