@@ -14,7 +14,6 @@ function searchCountries() {
 		success: showCountriesList
 	});
 }
-
 function showCountriesList(resp) {
 	console.log(resp);
   	countriesList.empty();
